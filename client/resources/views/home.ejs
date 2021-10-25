@@ -5,17 +5,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Realtime pizza</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
 </head>
 
-<body class="bg-blue-500">
-    <h1 class="text-center text-xl bg-purple-100 font-lato">Hello world</h1>
+<body class="font-lato text-pure-dark">
+    <header class="min-h-screen flex flex-col max-h-screen">
+        <nav class="container mx-auto flex items-center justify-between py-4">
+            <div>
+                <img src="/img/logo.png" alt="logo">
+            </div>
+            <div>
+                <ul class="flex items-center">
+                    <li class="nav-link"><a href="">Menu</a></li>
+                    <li class="nav-link"><a href="">Offers</a></li>
+                    <li class="nav-link"><a href="">Register</a></li>
+                    <li class="nav-link"><a href="">Login</a></li>
+                    <li class="ml-6"><a href=""
+                            class="bg-primary inline-block px-4 py-2 rounded-full hover:bg-primary-hover transition-colors duration-300"><img
+                                src="/img/cart.png" alt="cart" /></a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="hero py-16 bg-secondary ">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="w-1/2">
+                    <h6 class="text-lg"><em>Are you hungry?</em></h6>
+                    <h1 class="text-6xl font-bold">Don't wait</h1>
+                </div>
+                <div class="w-1/2" style="height: 400px;">
+                    <img src="/img/hero-pizza.png" alt="hero pizza"
+                        style="width: 100%; height: 100%; object-fit: contain;" />
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- Menu -->
+
+    <section class="hero container mx-auto py-8">
+        <h1 class="text-xl font-bold mb-8">All Pizzas</h1>
+        <div class="grid grid-cols-4 gap-x-12 gap-y-16">
+            <div class="">
+                <img src="/img/pizza.png" alt="Pizza" class="h-40 mx-auto">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">Margrehita</h2>
+                    <span class="py-1 px-4 uppercase rounded-full text-xs bg-secondary">small</span>
+                </div>
+                <div class="flex items-center justify-around mt-6">
+                    <span class="font-bold text-lg">&#8377; 250</span>
+                    <button
+                        class="py-1 px-6 rounded-full border-solid border-2 border-primary text-primary transition-colors duration-300 flex items-center font-bold hover:bg-primary hover:border-pure hover:text-pure">
+                        <span>+</span>
+                        <span class="ml-4">Add</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="/js/main.js"></script>
 </body>
+
 
 </html>

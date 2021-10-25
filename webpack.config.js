@@ -12,8 +12,8 @@ module.exports = {
     entry: './client/resources/js/app.js',
     output: {
         path: path.resolve(__dirname, './client/public'),
-        filename: 'js/[name].js'
-        // assetModuleFilename: 'img/[hash][ext][query]' // this will output images in images folder.
+        filename: 'js/[name].js',
+        assetModuleFilename: 'img/[hash][ext][query]' // this will output images in images folder.
     },
     module: {
         rules: [
