@@ -1,0 +1,58 @@
+<%- include('../partials/head.ejs') %>
+
+    <%- include('../partials/navigation.ejs') %>
+        <section class="bg-secondary py-16">
+            <div class="container mx-auto w-1/2">
+                <div class="flex items-center border-b border-gray-300 pb-4">
+                    <img src="/img/cart-black.png" alt="cart" />
+                    <h1 class="font-bold text-2xl ml-4">Order summery</h1>
+                </div>
+                <div class="">
+                    <div class="flex items-center my-8">
+                        <img src="/img/pizza.png" alt="pizza" class="w-24" />
+                        <div class="ml-4 flex-1">
+                            <h1>Marinara</h1>
+                            <span>MEDIUM</span>
+                        </div>
+                        <span class="flex-1">1 pcs</span>
+                        <span class="font-bold text-lg">&#8377; 300</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="text-right py-4">
+                    <div>
+                        <span class="text-lg font-bold">Total amount</span>
+                        <span class="text-primary font-bold ml-2 text-2xl">&#8377; 300</span>
+                    </div>
+                    <div>
+                        <form action="" class="mt-12">
+                            <input type="text" class="border border-gray-400 p-2 w-1/2 mb-4" placeholder="Phone no.">
+                            <input type="text" class="border border-gray-400 p-2 w-1/2" placeholder="Address">
+                            <div>
+                                <button type="submit" class="btn-primary mt-4">Order now</button>
+                            </div>
+                        </form>
+                    </div>
+                    <a href="/login" class="inline-block btn-primary mt-4">Login to
+                        continue</a>
+                </div>
+            </div>
+            <!-- <div class="py-16">
+                <div class="container mx-auto text-center">
+                    <h1 class="font-bold text-3xl mb-2">Cart Empty</h1>
+                    <p class="text-gray-500 text-lg mb-12">You haven't add any product in the cart. <br>
+                        Please go to
+                        main
+                        page
+                        and
+                        add to cart</p>
+                    <img src="/img/empty-cart.png" alt="Empty cart image" class="w-2/5 mx-auto" />
+                    <a href="/"
+                        class="px-6 py-2 rounded-full text-pure font-bold mt-12 bg-primary transition-colors duration-300 hover:bg-primary-hover inline-block">Go
+                        back</a>
+                </div>
+            </div> -->
+        </section>
+        </body>
+
+        </html>

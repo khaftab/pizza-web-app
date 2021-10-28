@@ -13,7 +13,19 @@ app.set('view-engine', 'ejs')
 app.set('views', path.join(__dirname, 'client/resources/views'))
 
 app.get('/', (req, res) => {
-    res.render('home.ejs')
+    res.render('home.ejs', { title: 'Realtime Pizza' })
+})
+
+app.get('/cart', (req, res) => {
+    res.render('customers/cart.ejs', { title: 'Cart' })
+})
+
+app.get('/login', (req, res) => {
+    res.render('auth/login.ejs', { title: 'Login' })
+})
+
+app.get('/register', (req, res) => {
+    res.render('auth/register.ejs', { title: 'Register' })
 })
 
 app.listen(PORT, () => console.log('Server is up'))
