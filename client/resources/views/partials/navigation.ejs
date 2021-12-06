@@ -9,8 +9,11 @@
             <li class="nav-link"><a href="/register">Register</a></li>
             <li class="nav-link"><a href="/login">Login</a></li>
             <li class="ml-6"><a href="/cart"
-                    class="bg-primary inline-block px-4 py-2 rounded-full hover:bg-primary-hover transition-colors duration-300"><img
-                        src="/img/cart.png" alt="cart" /></a></li>
+                    class="bg-primary px-4 py-2 rounded-full hover:bg-primary-hover transition-colors duration-300 flex items-center">
+                    <span id="cartCounter" class="text-white pr-2 font-bold">
+                        <%= session.cart ? session.cart.totalQty : '' %>
+                    </span>
+                    <img src="/img/cart.png" alt="cart" /></a></li>
         </ul>
     </div>
 </nav>
