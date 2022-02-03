@@ -1,19 +1,33 @@
 <nav class="container mx-auto flex items-center justify-between py-4">
     <div>
-        <img src="/img/logo.png" alt="logo">
+        <img src="/img/logo.png" alt="logo" />
     </div>
     <div>
         <ul class="flex items-center">
             <li class="nav-link"><a href="/">Menu</a></li>
             <li class="nav-link"><a href="">Offers</a></li>
+            <% if (user) { %>
+            <form id="logout" action="/logout" method="post"></form>
+            <li class="nav-link">
+                <a href="#" onclick="document.getElementById('logout').submit()"
+                    >Logout</a
+                >
+            </li>
+            <% } else { %>
             <li class="nav-link"><a href="/register">Register</a></li>
             <li class="nav-link"><a href="/login">Login</a></li>
-            <li class="ml-6"><a href="/cart"
-                    class="bg-primary px-4 py-2 rounded-full hover:bg-primary-hover transition-colors duration-300 flex items-center">
+            <% } %>
+            <li class="ml-6">
+                <a
+                    href="/cart"
+                    class="bg-primary px-4 py-2 rounded-full hover:bg-primary-hover transition-colors duration-300 flex items-center"
+                >
                     <span id="cartCounter" class="text-white pr-2 font-bold">
                         <%= session.cart ? session.cart.totalQty : '' %>
                     </span>
-                    <img src="/img/cart.png" alt="cart" /></a></li>
+                    <img src="/img/cart.png" alt="cart"
+                /></a>
+            </li>
         </ul>
     </div>
 </nav>

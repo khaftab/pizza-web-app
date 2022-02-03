@@ -4,17 +4,20 @@
 
             <section class="bg-secondary flex-1 flex items-center">
                 <div class="flex justify-center w-full w-max-x5 rounded">
-                    <form action="" class="shadow-md bg-pure px-8 pt-6 mb-4">
+                    <form action="/login" method="post" class="shadow-md bg-pure px-8 pt-6 mb-4">
+                        <% if(messages.error) {%>
+                            <span class="text-red-500 text-md"><%= messages.error %> </span> 
+                        <% } %>  
                         <div class="mb-4">
                             <label for="email" class="text-gray-700 text-sm font-bold">Email</label>
-                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <input type="email" class="form-control" name="email" placeholder="Enter your email">
                         </div>
                         <div class="mb-4">
                             <label for="password" class="text-gray-700 text-sm font-bold">Password</label>
-                            <input type="password" class="form-control" placeholder="***************">
+                            <input type="password" name="password" class="form-control" placeholder="***************">
                         </div>
                         <div class="flex justify-between items-center my-3">
-                            <button class="btn-primary">Login</button>
+                            <button type="submit" class="btn-primary">Login</button>
                             <a href="/register" class="text-primary hover:text-primary-hover">Don't have account</a>
                         </div>
                     </form>
