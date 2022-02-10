@@ -14,8 +14,7 @@ const PORT = process.env.PORT || 7000;
 
 // db connection
 
-const MONGODB_URI =
-    "mongodb+srv://khaftab:aftab123@cluster0.lgin6.mongodb.net/realtime-pizza";
+const MONGODB_URI = "mongodb+srv://khaftab:aftab123@cluster0.lgin6.mongodb.net/realtime-pizza";
 
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
@@ -39,7 +38,7 @@ app.use(
         secret: process.env.COOKIE_SECRET,
         resave: false,
         saveUninitialized: false,
-        cookie: { maxAge: 1000 * 60 * 60 * 24 },
+        cookie: { maxAge: 1000 * 60 * 60 * 48 }, // 48 hours
         store: MongoDbStore.create({
             mongoUrl: MONGODB_URI,
             collectionName: "sessions",

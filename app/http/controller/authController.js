@@ -2,6 +2,9 @@ const User = require("../../models/user");
 const bcrypt = require("bcrypt");
 const passport = require("passport");
 module.exports = () => {
+    const _getRedirectUrl = (req) => {
+        return req.user.role === "customer" ? "/customer/orders" : "/admin/orders";
+    };
     return {
         login(req, res) {
             res.render("auth/login.ejs", { title: "Login" });
@@ -30,7 +33,8 @@ module.exports = () => {
                         req.flash("error", message.message);
                         return next(err);
                     }
-                    return res.redirect("/");
+                    console.log(_getRedirectUrl(req));
+                    return res.redirect(_getRedirectUrl(req));
                 });
             })(req, res, next);
         },
@@ -61,7 +65,7 @@ module.exports = () => {
             });
             try {
                 await user.save();
-                res.redirect("/");
+                res.redirect("/login");
             } catch (error) {
                 req.flash("error", "Something went wrong");
                 return res.redirect("/register");
